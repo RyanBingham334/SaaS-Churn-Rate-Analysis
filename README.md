@@ -116,10 +116,17 @@ Each intervention gives the company a chance to save the customer before they hi
 ## Project Files
 ```
 SaaS-Churn-Rate-Analysis/
-├── README.md                           # You're reading it
-├── analysis.md                         # Full walkthrough of my process
-├── data_dictionary.md                  # Database structure and relationships
-├── SQL/                                # All queries (13 total)
+├── README.md                                    # You're reading it
+├── analysis.md                                  # Full walkthrough of my process
+├── data_dictionary.md                           # Database structure and relationships
+├── data_sources_and_acknowledgments.md          # Data source credits
+├── Raw Data/                                    # Original and generated data files
+│   ├── customer_churn_usage_patterns.csv
+│   ├── dim_users.csv
+│   ├── fact_billing.csv
+│   ├── fact_support_ticket.csv
+│   └── fact_useage_logs.csv
+├── SQL/                                         # All queries (13 total)
 │   ├── 01_churn_rate_percentage.sql
 │   ├── 02_churn_plan_type.sql
 │   ├── 03_churn_analysis.sql
@@ -133,8 +140,21 @@ SaaS-Churn-Rate-Analysis/
 │   ├── 11_current_statistics.sql
 │   ├── 12_users_saved.sql
 │   └── 13_predicted_statistics.sql
-├── Results/                            # Query outputs (CSV)
-└── Visualizations/                     # Power BI charts and dashboard
+├── Results/                                     # Query outputs (CSV - 13 files)
+│   ├── 01_churn_rate_percentage.csv
+│   ├── 02_churn_plan_type.csv
+│   ├── 03_churn_analysis.csv
+│   ├── 04_ticket_type.csv
+│   ├── 05_avg_resolution_time.csv
+│   ├── 06_payment_failure_churn.csv
+│   ├── 07_tenure_churn_rate.csv
+│   ├── 08_billing_ticket_per_failure.csv
+│   ├── 09_technical_ticket_churn.csv
+│   ├── 10_gap_before_churn.csv
+│   ├── 11_current_statistics.csv
+│   ├── 12_users_saved.csv
+│   └── 13_predicted_statistics.csv
+└── Visualizations/                              # Power BI charts and dashboard
     ├── executive_dashboard.png
     ├── avg_user_tenure.png
     ├── churned_vs_ticket_type.png
