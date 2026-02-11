@@ -44,7 +44,7 @@ Payment failures create a cascading disaster. Unlike technical bugs that users c
 
 This isn't about users choosing to leave—it's about the system forcing them out.
 
-**See the query:** [`06_payment_failure_churn.sql`](sql/06_payment_failure_churn.sql)
+**See the query:** [`06_payment_failure_churn.sql`](SQL/06_payment_failure_churn.sql)
 
 ### Onboarding Is Broken
 
@@ -52,7 +52,7 @@ This isn't about users choosing to leave—it's about the system forcing them ou
 
 New customers experience 40-49% monthly churn during months 1-5. But users who survive this gauntlet show strong retention (≤20%). The problem isn't long-term value—it's that new users encounter too many issues during the critical evaluation period when tolerance for friction is minimal.
 
-**See the query:** [`07_tenure_churn_rate.sql`](sql/07_tenure_churn_rate.sql)
+**See the query:** [`07_tenure_churn_rate.sql`](SQL/07_tenure_churn_rate.sql)
 
 ### Churned Users Submit 3x More Support Tickets
 
@@ -65,7 +65,7 @@ Churned users average 6.4 tickets vs 2.3 for active users. But it's not just vol
 
 Churn threshold: **3 billing tickets OR 4-5 technical tickets**
 
-**See the queries:** [`03_churn_analysis.sql`](sql/03_churn_analysis.sql), [`09_technical_ticket_churn.sql`](sql/09_technical_ticket_churn.sql)
+**See the queries:** [`03_churn_analysis.sql`](SQL/03_churn_analysis.sql), [`09_technical_ticket_churn.sql`](SQL/09_technical_ticket_churn.sql)
 
 ### There's a 7-9 Day Intervention Window
 
@@ -73,13 +73,13 @@ Churn threshold: **3 billing tickets OR 4-5 technical tickets**
 
 47% of churned users show 7-9 days of inactivity before churning. This is an actionable signal—these users haven't left yet, but they're on the edge. Proactive outreach during this window (satisfaction surveys, support offers, feature tutorials) could recover at-risk customers.
 
-**See the query:** [`10_gap_before_churn.sql`](sql/10_gap_before_churn.sql)
+**See the query:** [`10_gap_before_churn.sql`](SQL/10_gap_before_churn.sql)
 
 ### Support Speed Isn't the Problem
 
 Resolution times are evenly distributed between churned and active users. If anything, active users wait slightly longer. The issue isn't how fast support responds—it's that users shouldn't need support this often in the first place. This is a product quality problem, not a support problem.
 
-**See the query:** [`05_avg_resolution_time.sql`](sql/05_avg_resolution_time.sql)
+**See the query:** [`05_avg_resolution_time.sql`](SQL/05_avg_resolution_time.sql)
 
 ## What They Should Do
 
@@ -102,16 +102,16 @@ Each intervention gives the company a chance to save the customer before they hi
 
 ## The Numbers
 
-| Metric | Current | Target |
-|--------|---------|-----------|
-| Churn rate | 25.5% | 7.1% (-18.4 percentage points) |
-| Annual revenue | $820,440 | $971,729 (+$151,289 or 18.4% increase) |
-| Users recoverable | 627 | Through targeted interventions |
-| Critical window | 7-9 days | Inactivity threshold for outreach |
-| Payment failure threshold | 3 failures | 75% churn risk |
-| Onboarding danger zone | Months 1-5 | 40-49% monthly churn |
+| Metric | Before Intervention | After Intervention |
+|--------|---------------------|-------------------|
+| Churn rate | 25.5% | 7.1% |
+| Annual revenue | $820,440 | $971,729 |
+| Customers saved annually | 0 | 627 customers |
+| High-severity tickets | 18-20% of all tickets | Reduced through proactive intervention |
+| Payment failure impact | 3 failures = 75% churn | Target: <5% failure rate |
+| Early-stage churn (months 1-5) | 40-49% monthly | Target: <20% monthly |
 
-**See the projections:** [`13_predicted_statistics.sql`](sql/13_predicted_statistics.sql)
+**See the projections:** [`13_predicted_statistics.sql`](SQL/13_predicted_statistics.sql)
 
 ## Project Files
 ```
@@ -119,7 +119,7 @@ SaaS-Churn-Rate-Analysis/
 ├── README.md                           # You're reading it
 ├── analysis.md                         # Full walkthrough of my process
 ├── data_dictionary.md                  # Database structure and relationships
-├── sql/                                # All queries (13 total)
+├── SQL/                                # All queries (13 total)
 │   ├── 01_churn_rate_percentage.sql
 │   ├── 02_churn_plan_type.sql
 │   ├── 03_churn_analysis.sql
@@ -133,7 +133,7 @@ SaaS-Churn-Rate-Analysis/
 │   ├── 11_current_statistics.sql
 │   ├── 12_users_saved.sql
 │   └── 13_predicted_statistics.sql
-├── results/                            # Query outputs (CSV)
+├── Results/                            # Query outputs (CSV)
 └── Visualizations/                     # Power BI charts and dashboard
     ├── executive_dashboard.png
     ├── avg_user_tenure.png
