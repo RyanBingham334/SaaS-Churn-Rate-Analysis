@@ -1,0 +1,5 @@
+tech_ticket_bucket,user_count,churned_count,churn_rate_pct
+1 technical ticket,690,103,14.9
+2-3 technical tickets,788,297,37.7
+4-5 technical tickets,216,173,80.1
+6+ technical tickets,806,65,8.1

@@ -1,0 +1,7 @@
+payment_failures,user_count,churned_count,churn_rate_pct
+0,1498,189,12.6
+1,691,253,36.6
+2,242,144,59.5
+3,59,43,72.9
+4,9,8,88.9
+6,1,1,100.0
