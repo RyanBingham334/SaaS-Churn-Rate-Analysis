@@ -102,7 +102,7 @@ Each intervention gives the company a chance to save the customer before they hi
 
 ## The Numbers
 
-| Metric | Current | Potential |
+| Metric | Current | Target |
 |--------|---------|-----------|
 | Churn rate | 25.5% | 7.1% (-18.4 percentage points) |
 | Annual revenue | $820,440 | $971,729 (+$151,289 or 18.4% increase) |
