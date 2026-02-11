@@ -63,7 +63,7 @@ I then analyzed ticket category distribution to identify specific problem areas.
 
 **Finding:** [`04_ticket_type.csv`](results/04_ticket_type.csv)
 
-![Ticket Categories](visualizations/percentage_of_tickets_by_category.png)
+![Ticket Categories](Visualizations/percentage_of_tickets_by_category.png)
 
 Access-related tickets (the simplest category) show minimal correlation with churn. The primary churn drivers are technical issues (bugs) and billing problems (which lock users out of the application).
 
@@ -89,7 +89,7 @@ Next, I examined the relationship between payment failures and churn.
 
 **Finding:** [`06_payment_failure_churn.csv`](results/06_payment_failure_churn.csv)
 
-![Payment Failures vs Churn](visualizations/payment_failure_vs_churn_rate.png)
+![Payment Failures vs Churn](Visualizations/payment_failure_vs_churn_rate.png)
 
 This reveals a critical issue. Payment failures correlate strongly with churn. 4 failures = 90% churn rate, 3 = 75%, 2 = 60%. These are severe retention failures.
 
@@ -103,7 +103,7 @@ I hypothesized that users are experiencing a short-term tenure pattern. This wou
 
 **Finding:** [`07_tenure_churn_rate.csv`](results/07_tenure_churn_rate.csv)
 
-![Average User Tenure](visualizations/avg_user_tenure.png)
+![Average User Tenure](Visualizations/avg_user_tenure.png)
 
 The data confirms a significant onboarding issue. In the first 5 months, approximately 40% of users churn each month. Long-term users show declining churn rates. This indicates that those who survive the initial period develop tolerance or find value despite issues. Users who persist beyond 5-6 months demonstrate increasingly strong retention.
 
@@ -129,7 +129,7 @@ Finally, I conducted a similar analysis for technical tickets to compare severit
 
 **Finding:** [`09_technical_ticket_churn.csv`](results/09_technical_ticket_churn.csv)
 
-![Churned Users by Ticket Type](visualizations/churned_vs_ticket_type.png)
+![Churned Users by Ticket Type](Visualizations/churned_vs_ticket_type.png)
 
 Technical issues, while problematic, are less severe than billing issues. They occur less frequently and have a higher tolerance threshold. Payment issues cause immediate, sharp churn spikes with a threshold at 3 failures. Technical issues have a threshold at 4-5 tickets. Some users persist even beyond that point—a pattern rarely seen with billing failures.
 
@@ -155,7 +155,7 @@ To develop more targeted interventions, I analyzed user inactivity patterns prec
 
 **Finding:** [`10_gap_before_churn.csv`](results/10_gap_before_churn.csv)
 
-![Login Gap Distribution](visualizations/gap_before_churn.png)
+![Login Gap Distribution](Visualizations/gap_before_churn.png)
 
 The majority of churned users show 7-9 days of inactivity before churning.
 
@@ -234,4 +234,4 @@ Deploy automated alerts for:
 
 ## Executive Summary
 
-![Executive Dashboard](visualizations/executive_dashboard.png)
+![Executive Dashboard](Visualizations/executive_dashboard.png)
