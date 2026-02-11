@@ -19,9 +19,9 @@ To begin, I executed 2 queries targeting what I consider the most critical basel
 
 ## Step 2: Overall Churn Rate Analysis
 
-**Query:** [`01_churn_rate_percentage.sql`](sql/01_churn_rate_percentage.sql)
+**Query:** [`01_churn_rate_percentage.sql`](SQL/01_churn_rate_percentage.sql)
 
-**Finding:** [`01_churn_rate_percentage.csv`](results/01_churn_rate_percentage.csv)
+**Finding:** [`01_churn_rate_percentage.csv`](Results/01_churn_rate_percentage.csv)
 
 The churn data reveals a significant discrepancy. The overall churn rate is 25.52%, substantially above industry standards.
 
@@ -29,9 +29,9 @@ The churn data reveals a significant discrepancy. The overall churn rate is 25.5
 
 ## Step 3: Churn Rate by Plan Type
 
-**Query:** [`02_churn_plan_type.sql`](sql/02_churn_plan_type.sql)
+**Query:** [`02_churn_plan_type.sql`](SQL/02_churn_plan_type.sql)
 
-**Finding:** [`02_churn_plan_type.csv`](results/02_churn_plan_type.csv)
+**Finding:** [`02_churn_plan_type.csv`](Results/02_churn_plan_type.csv)
 
 The analysis shows churn rates are relatively consistent across subscription tiers.
 
@@ -44,9 +44,9 @@ Next, I executed a query to analyze:
 - **a.** Average support tickets per active vs. churned user
 - **b.** Distribution of ticket severity (low, medium, high)
 
-**Query:** [`03_churn_analysis.sql`](sql/03_churn_analysis.sql)
+**Query:** [`03_churn_analysis.sql`](SQL/03_churn_analysis.sql)
 
-**Finding:** [`03_churn_analysis.csv`](results/03_churn_analysis.csv)
+**Finding:** [`03_churn_analysis.csv`](Results/03_churn_analysis.csv)
 
 **Key findings:**
 
@@ -59,9 +59,9 @@ Next, I executed a query to analyze:
 
 I then analyzed ticket category distribution to identify specific problem areas.
 
-**Query:** [`04_ticket_type.sql`](sql/04_ticket_type.sql)
+**Query:** [`04_ticket_type.sql`](SQL/04_ticket_type.sql)
 
-**Finding:** [`04_ticket_type.csv`](results/04_ticket_type.csv)
+**Finding:** [`04_ticket_type.csv`](Results/04_ticket_type.csv)
 
 ![Ticket Categories](Visualizations/percentage_of_tickets_by_category.png)
 
@@ -73,9 +73,9 @@ Access-related tickets (the simplest category) show minimal correlation with chu
 
 To understand the root cause, I investigated whether support response times contribute to churn.
 
-**Query:** [`05_avg_resolution_time.sql`](sql/05_avg_resolution_time.sql)
+**Query:** [`05_avg_resolution_time.sql`](SQL/05_avg_resolution_time.sql)
 
-**Finding:** [`05_avg_resolution_time.csv`](results/05_avg_resolution_time.csv)
+**Finding:** [`05_avg_resolution_time.csv`](Results/05_avg_resolution_time.csv)
 
 Resolution times are evenly distributed between churned and active users. If anything, active users experience slightly longer resolution times. This suggests support speed is not the primary churn driver.
 
@@ -85,9 +85,9 @@ Resolution times are evenly distributed between churned and active users. If any
 
 Next, I examined the relationship between payment failures and churn.
 
-**Query:** [`06_payment_failure_churn.sql`](sql/06_payment_failure_churn.sql)
+**Query:** [`06_payment_failure_churn.sql`](SQL/06_payment_failure_churn.sql)
 
-**Finding:** [`06_payment_failure_churn.csv`](results/06_payment_failure_churn.csv)
+**Finding:** [`06_payment_failure_churn.csv`](Results/06_payment_failure_churn.csv)
 
 ![Payment Failures vs Churn](Visualizations/payment_failure_vs_churn_rate.png)
 
@@ -99,9 +99,9 @@ This reveals a critical issue. Payment failures correlate strongly with churn. 4
 
 I hypothesized that users are experiencing a short-term tenure pattern. This would suggest an onboarding problem where new users encounter too many issues and churn early.
 
-**Query:** [`07_tenure_churn_rate.sql`](sql/07_tenure_churn_rate.sql)
+**Query:** [`07_tenure_churn_rate.sql`](SQL/07_tenure_churn_rate.sql)
 
-**Finding:** [`07_tenure_churn_rate.csv`](results/07_tenure_churn_rate.csv)
+**Finding:** [`07_tenure_churn_rate.csv`](Results/07_tenure_churn_rate.csv)
 
 ![Average User Tenure](Visualizations/avg_user_tenure.png)
 
@@ -113,9 +113,9 @@ The data confirms a significant onboarding issue. In the first 5 months, approxi
 
 To determine whether billing issues originate from user error or system problems, I compared billing ticket volume to payment failures.
 
-**Query:** [`08_billing_ticket_per_failure.sql`](sql/08_billing_ticket_per_failure.sql)
+**Query:** [`08_billing_ticket_per_failure.sql`](SQL/08_billing_ticket_per_failure.sql)
 
-**Finding:** [`08_billing_ticket_per_failure.csv`](results/08_billing_ticket_per_failure.csv)
+**Finding:** [`08_billing_ticket_per_failure.csv`](Results/08_billing_ticket_per_failure.csv)
 
 The data indicates the issue is primarily system-side. Customers submit billing tickets even without payment failures. Additionally, billing ticket volume is initially high (suggesting users want to resolve issues). However, it eventually declines (suggesting users give up as frustration mounts).
 
@@ -125,9 +125,9 @@ The data indicates the issue is primarily system-side. Customers submit billing 
 
 Finally, I conducted a similar analysis for technical tickets to compare severity against billing issues.
 
-**Query:** [`09_technical_ticket_churn.sql`](sql/09_technical_ticket_churn.sql)
+**Query:** [`09_technical_ticket_churn.sql`](SQL/09_technical_ticket_churn.sql)
 
-**Finding:** [`09_technical_ticket_churn.csv`](results/09_technical_ticket_churn.csv)
+**Finding:** [`09_technical_ticket_churn.csv`](Results/09_technical_ticket_churn.csv)
 
 ![Churned Users by Ticket Type](Visualizations/churned_vs_ticket_type.png)
 
@@ -151,9 +151,9 @@ Users initially engage support at rates proportional to issue frequency. However
 
 To develop more targeted interventions, I analyzed user inactivity patterns preceding churn.
 
-**Query:** [`10_gap_before_churn.sql`](sql/10_gap_before_churn.sql)
+**Query:** [`10_gap_before_churn.sql`](SQL/10_gap_before_churn.sql)
 
-**Finding:** [`10_gap_before_churn.csv`](results/10_gap_before_churn.csv)
+**Finding:** [`10_gap_before_churn.csv`](Results/10_gap_before_churn.csv)
 
 ![Login Gap Distribution](Visualizations/gap_before_churn.png)
 
@@ -179,9 +179,9 @@ I executed 3 additional queries to quantify intervention impact:
 - **b.** Users recoverable through specific interventions
 - **c.** Projected outcomes if interventions are successfully implemented
 
-**Query:** [`11_current_statistics.sql`](sql/11_current_statistics.sql)
+**Query:** [`11_current_statistics.sql`](SQL/11_current_statistics.sql)
 
-**Finding:** [`11_current_statistics.csv`](results/11_current_statistics.csv)
+**Finding:** [`11_current_statistics.csv`](Results/11_current_statistics.csv)
 
 Current churn rate confirmed at 25.5%, establishing the baseline for comparison.
 
@@ -189,9 +189,9 @@ Current churn rate confirmed at 25.5%, establishing the baseline for comparison.
 
 ## Step 15: Intervention Effectiveness Analysis
 
-**Query:** [`12_users_saved.sql`](sql/12_users_saved.sql)
+**Query:** [`12_users_saved.sql`](SQL/12_users_saved.sql)
 
-**Finding:** [`12_users_saved.csv`](results/12_users_saved.csv)
+**Finding:** [`12_users_saved.csv`](Results/12_users_saved.csv)
 
 **Intervention effectiveness projections:**
 
@@ -203,9 +203,9 @@ Current churn rate confirmed at 25.5%, establishing the baseline for comparison.
 
 ## Step 16: Projected Impact Analysis
 
-**Query:** [`13_predicted_statistics.sql`](sql/13_predicted_statistics.sql)
+**Query:** [`13_predicted_statistics.sql`](SQL/13_predicted_statistics.sql)
 
-**Finding:** [`13_predicted_statistics.csv`](results/13_predicted_statistics.csv)
+**Finding:** [`13_predicted_statistics.csv`](Results/13_predicted_statistics.csv)
 
 **Projected results if all interventions are successfully implemented:**
 
